@@ -8,7 +8,7 @@ with open("data.yml", "r") as f:
 
 GITHUB_TOKEN=os.environ['X_GITHUB_TOKEN']
 gh = Github(GITHUB_TOKEN)
-org = gh.get_organization('LineageOS')
+org = gh.get_organization('PixelExtended')
 members = set(x.login.lower() for x in org.get_members())
 everyone = set([x.lower() for y in [y["members"] for y in data.values()] for x in y])
 
